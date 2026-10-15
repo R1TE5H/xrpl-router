@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Custom global variables for background grids and payment route paths */
+  --grid-color: rgba(0, 0, 0, 0.05);
 }
 
 @theme inline {
@@ -10,12 +12,26 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Add high-fidelity animation tokens for financial flow visuals */
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-path-fade: path-fade 3s linear infinite;
+
+  @keyframes glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  @keyframes path-fade {
+    from { stroke-dashoffset: 20; }
+    to { stroke-dashoffset: 0; }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --grid-color: rgba(255, 255, 255, 0.05);
   }
 }
 
