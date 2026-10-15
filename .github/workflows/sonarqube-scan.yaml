@@ -26,5 +26,5 @@ jobs:
         with:
           args: >
             -Dsonar.organization=r1te5h
-            -Dsonar.projectKey=R1TE5H_blockchain-explorer 
+            -Dsonar.projectKey=R1TE5H_xrpl-router
             -Dsonar.sources=.
